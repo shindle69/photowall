@@ -1,0 +1,16 @@
+{% extends "blog/layout.html" %}
+
+
+{% block content %}
+
+<h1> History </h1>
+    
+{% for post in post_list %}   
+<li>
+    <a href="{% url "blog:post_detail" post.pk %}">        
+        {{post.title}}  
+    </a> 
+</li>                        
+{% endfor %}          
+
+{% endblock %}
